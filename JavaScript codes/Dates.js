@@ -1,0 +1,21 @@
+var curentdt = new Date();
+console.log(curentdt);
+var currentTimeUnix = curentdt.getTime();
+console.log(currentTimeUnix);
+var currentFullYr = curentdt.getFullYear();
+var currentMonth = curentdt.getMonth();
+var currenDay = curentdt.getDay();
+var currentDateString =curentdt.toDateString();
+var currentMillisecond =curentdt.getMilliseconds();
+var timeZone = curentdt.getTimezoneOffset();
+var utcdate = curentdt.getUTCDate();
+var locale = curentdt.toLocaleTimeString();
+
+console.log(currentFullYr);
+console.log(currentMonth);
+console.log(currenDay);
+console.log(currentDateString);
+console.log(currentMillisecond);
+console.log(timeZone);
+console.log(utcdate);
+console.log(locale);
