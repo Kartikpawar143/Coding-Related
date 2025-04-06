@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(135 deg, #8bc6ec 0%, #9599e2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.card img{
+    width: 100%;
+    height: 30%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 75%;
+    text-align: center;
+}
+#amountBox{
+    width: 80%;
+    height: 15%;
+    background-color: #8bc6ec;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#leftBox{
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.rightbox{
+    margin-left: 50px;
+}
+.imgBox img{
+    height: 3.5rem;
+    width: 3.5rem
+}
+#paymentButton{
+    width: 80%;
+    height: 5%;
+    background-color: rgb( 22, 22, 79);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.cancleBox{
+    text-decoration:none;
+    color: rgb(46, 43, 43);
+    font-weight: large;
+    margin-top: -13px;
+}
+.container:hover{
+    background-color: black;
+}
+.card:hover{
+    box-shadow: 0px 10px 100px  aqua;
+    border: 5px dotted black;
+}
+#amountBox:hover{
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 0px 10px 80px  #9599e2;
+    border: 2px dashed white;
+}

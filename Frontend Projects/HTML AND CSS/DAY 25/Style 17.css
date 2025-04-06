@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.todo-container{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    box-shadow: 3px 3px 10px rgb(0,0 ,0, 0.15);
+    /*border-top: 5px solid green;
+    border-bottom: 5px solid green;*/
+    border: 5px solid green;
+    transition: all 1s linear;
+}
+.todo-container:hover{
+    transform: scale(1.5);
+}
+.todo-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.todo-value{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-family: quicksand;
+    font-weight: bold;
+    flex-grow: 1;
+}
+.todo-items:has(.todo-checkbox:checked){
+    color: #555555;
+    background: rgb(193, 27, 27);
+    text-decoration: line-through;
+    order: 1;
+}
+h1{
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+

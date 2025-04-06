@@ -1,0 +1,22 @@
+
+body{
+    /*display: inline-block;*/
+}
+img{
+    box-shadow: 15px 10px 15px black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    padding: 10px;
+    margin:5px;
+}
+h1{
+    color: white;
+}
+img{
+    width: 200px;
+    
+}
+body{
+    background-image: url(pexels-pixabay-36717.jpg);
+}

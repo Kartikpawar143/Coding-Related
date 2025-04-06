@@ -1,0 +1,29 @@
+body{
+    background-color: gray;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 300px;
+    background-color: red;
+    border-color: black;
+    position: relative;
+    animation-name: kartikPawar;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    /*animation-direction: alternate;*/
+    /*animation-direction: reverse;*/
+}
+@keyframes kartikPawar{
+    from{
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        top: 0px;
+        left: 100px;
+    }
+}

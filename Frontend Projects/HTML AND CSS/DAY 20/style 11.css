@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    height: 500%;
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+
+.items{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: rgb(161, 195, 23);
+}
+.box3{
+    background-color: rgb(25, 98, 201);;
+}
+.box4{
+    background-color: rgb(212, 18, 229);
+}
+
+@media (min-width:600px) and (max-width:750px){
+    .box1{
+        background-color: aqua;
+    }
+    .box2{
+        border: 10px solid green;
+        background-color: blue;
+    }
+}

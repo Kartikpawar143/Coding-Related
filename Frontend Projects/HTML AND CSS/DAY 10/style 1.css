@@ -1,0 +1,19 @@
+h2{
+    color: white; 
+    background-color: black ;
+    padding: 1%;
+    font-style: italic;
+}
+p{
+    color:fuchsia;
+    padding: 2%;
+}
+ul{
+    color: fuchsia;
+}
+label{
+    color: fuchsia;
+}
+button{
+    color: brown;
+}
