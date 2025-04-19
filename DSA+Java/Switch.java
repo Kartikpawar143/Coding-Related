@@ -28,7 +28,7 @@ public class Switch {
         //         break;
         // }
 
-        int day = sc.nextInt();
+        //int day = sc.nextInt();
         // switch (day){
         // case 1 -> System.out.println("Monday");
         // case 2 -> System.out.println("Tuesday");
@@ -40,9 +40,40 @@ public class Switch {
         // }
          
 
-        switch (day) {
-            case 1, 2, 3, 4, 5 -> System.out.println("Weekday");
-            case 6, 7 -> System.out.println("Weekend");
+        // switch (day) {
+        //     case 1, 2, 3, 4, 5 -> System.out.println("Weekday");
+        //     case 6, 7 -> System.out.println("Weekend");
+        // }
+
+
+        // NESTED SWITCH STATEMENTS
+
+        int empID = sc.nextInt();
+        String department = sc.next();
+
+        switch (empID) {
+            case 1:
+                System.out.println("Rahul");
+                break;
+            case 2:
+                System.out.println("Ravi");
+                break;
+            case 3:
+                switch (department) {
+                    case "IT":
+                        System.out.println("IT Department");
+                        break;
+                    case "CS":
+                        System.out.println("CS Department");
+                        break;
+                    default:
+                        System.out.println("No department found");
+                    
+                }
+            default:
+                System.out.println("No employee found");
+                break;
         }
-    }
+    }    
+
 }
