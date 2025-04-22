@@ -9,8 +9,22 @@ public class Funtions_Methods {
     //     int result = sum3();
     //     System.out.println(result);
 
-        example();
-        
+        //example();
+        {
+        int a = 10;
+        int b = 20;
+        int c = a+b;
+        System.out.println("The sum is: " + c);
+
+        { // here we are using block scope
+            // this is a block scope
+            // here values r changeing
+            a = 20;
+            b = 30;
+            c = a+b;
+            System.out.println("The sum is: " + c);
+        }
+        }
 
     }
 
@@ -38,6 +52,8 @@ public class Funtions_Methods {
 
     // }
 
+
+
     //  static int sum3() {
     //     Scanner sc = new Scanner (System.in);
     //     System.out.println("Enter first no.: ");
@@ -49,27 +65,26 @@ public class Funtions_Methods {
     //  }
 
 
-    static void example(){
 
-        Scanner sc = new Scanner (System.in);
-        System.out.print("enter fruit: ");
-        String Fruit = sc.next();
+    // static void example(){
+    //     Scanner sc = new Scanner (System.in);
+    //     System.out.print("enter fruit: ");
+    //     String Fruit = sc.next();
 
-        switch (Fruit){
-            case "Apple":
-                System.out.println("Sweet");
-                break;
-            case "Watermelon":
-                System.out.println("big");
-                break;
-            case "Mango":
-                System.out.println("tasty");
-                break;
-            default:
-                System.out.println("not valid");
-        }
-        
-    }
+    //     switch (Fruit){
+    //         case "Apple":
+    //             System.out.println("Sweet");
+    //             break;
+    //         case "Watermelon":
+    //             System.out.println("big");
+    //             break;
+    //         case "Mango":
+    //             System.out.println("tasty");
+    //             break;
+    //         default:
+    //             System.out.println("not valid");
+    //     }
+    //}
 
 
 
