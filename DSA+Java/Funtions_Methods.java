@@ -2,20 +2,28 @@ import java.util.*;
 public class Funtions_Methods {
     public static void main(String[] args) {
         //sum();
+
+    //     int result = sum2();
+    //     System.out.println("The sum is: " + result);
+
+    //     int result = sum3();
+    //     System.out.println(result);
+
+        example();
         
-        int result = sum2();
-        System.out.println("The sum is: " + result);
 
     }
-    static int sum2(){
-        Scanner sc = new Scanner (System.in);
-        System.out.println("Enter the first no.: ");
-        int a = sc.nextInt();
-        System.out.println("Enter the second no.: ");
-        int b = sc.nextInt();
-        int c = a + b;
-        return c;
-    }
+
+
+    // static int sum2(){
+    //     Scanner sc = new Scanner (System.in);
+    //     System.out.println("Enter the first no.: ");
+    //     int a = sc.nextInt();
+    //     System.out.println("Enter the second no.: ");
+    //     int b = sc.nextInt();
+    //     int c = a + b;
+    //     return c;
+    // }
 
 
 
@@ -30,9 +38,40 @@ public class Funtions_Methods {
 
     // }
 
+    //  static int sum3() {
+    //     Scanner sc = new Scanner (System.in);
+    //     System.out.println("Enter first no.: ");
+    //     int a = sc.nextInt(); 
+    //     System.out.println("Enter second no.: ");
+    //     int b = sc.nextInt();
+    //     int c = a + b;
+    //     return c;
+    //  }
+
+
+    static void example(){
+
+        Scanner sc = new Scanner (System.in);
+        System.out.print("enter fruit: ");
+        String Fruit = sc.next();
+
+        switch (Fruit){
+            case "Apple":
+                System.out.println("Sweet");
+                break;
+            case "Watermelon":
+                System.out.println("big");
+                break;
+            case "Mango":
+                System.out.println("tasty");
+                break;
+            default:
+                System.out.println("not valid");
+        }
+        
+    }
+
+
+
 
 }
-
-
-
-
