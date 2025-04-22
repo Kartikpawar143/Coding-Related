@@ -13,6 +13,8 @@ public class Funtions_Methods {
 
     //BlockScope.main(args);
 
+    shadowing.main(args);
+
 
     }
 
@@ -95,7 +97,7 @@ public class Funtions_Methods {
 
 
 
-    
+
     // static class BlockScope {
     //     public static void main(String[] args) {
     //         int a = 10;
@@ -111,6 +113,24 @@ public class Funtions_Methods {
     //             c = a + b;
     //             System.out.println("The sum is: " + c);
     //         }
+    //     }
+    // }
+
+
+
+
+    // static class shadowing{
+    //     static int x=90; //The static keyword means that the variable x belongs to the class, not to any specific object of the class.
+    //             public static void main(String[] args) {
+         
+    //             System.out.println(x);
+    //             int x=10;
+    //             System.out.println("The value of x is: " + x);
+    //             display();
+    
+    //     }
+    //     static void display(){
+    //         System.out.println("The value of x is: " + x);
     //     }
     // }
 
