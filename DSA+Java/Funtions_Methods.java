@@ -13,7 +13,7 @@ public class Funtions_Methods {
 
     //BlockScope.main(args);
 
-    shadowing.main(args);
+    //shadowing.main(args);
 
 
     }
@@ -53,9 +53,6 @@ public class Funtions_Methods {
     //     int c = a + b;
     //     return c;
     //  }
-
-
-
 
 
     // static class SwitchCase {
@@ -135,6 +132,63 @@ public class Funtions_Methods {
     // }
 
 
+
+
+    // static class Varargs {
+    //     public static void main (String args[]){
+    //        // fun(2,4,32,2,12,323,2,12);
+    //        //multiple(2,4,"kartik","pawar");
+            
+    //     }
+    //     // static void fun(int...v){
+    //     //     System.out.println(Arrays.toString(v));
+    //     // }
+        
+    //     static void multiple(Object...v) { //for multiple data types we can use Object
+    //         System.out.println(Arrays.toString(v));
+        
+    //     }
+    // }
+
+
+    // static class overloading{
+    //     public static void main(String[] args) {
+            
+    //         int result = sum(10, 20);
+    //         System.out.println("The sum is: " + result);
+
+    //         Scanner sc = new Scanner (System.in);
+    //         int a = sc.nextInt();
+    //         int b = sc.nextInt();
+    //         int c = sc.nextInt();
+
+    //         sum(a,b,c); // this will call the second method
+
+    //         fun("Sanket");
+
+    //         fun(3,2,4);
+
+    //         fun("Kartik", "Pawar");
+    //     }
+
+    //     static int sum( int a , int b){
+    //         return a+b;
+    //     }
+
+    //     static void sum(int a, int b, int c){
+    //         System.out.println(a+b+c);
+    //     }
+
+    //     static void fun(int...v){
+    //         System.out.println(Arrays.toString(v));
+    //     }
+
+    //     static void fun(String...x){
+    //         System.out.println(Arrays.toString(x));
+    //     }
+
+
+    
     
 
 }
