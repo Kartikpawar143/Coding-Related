@@ -1,0 +1,20 @@
+class  FactorialofEachNo
+{
+	public static void main(String[] args) 
+	{
+		int num=345;
+		
+		while (num>0)
+		{
+			int fact=1;
+			int rem=num%10;
+			for (int i=1;i<=rem;i++)
+			{
+				fact=fact*i;
+			}
+			System.out.println(fact);
+			num/=10;
+		}
+		
+	}
+}

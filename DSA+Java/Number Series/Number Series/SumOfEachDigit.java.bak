@@ -1,0 +1,7 @@
+class SumOfEachDigit 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+}

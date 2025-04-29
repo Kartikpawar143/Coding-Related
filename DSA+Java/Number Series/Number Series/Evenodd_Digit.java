@@ -1,0 +1,21 @@
+class Evenodd_Digit
+{
+	public static void main(String[] args) 
+	{
+		int num=4567;
+		int rev=0;
+		while (num>0)
+		{
+			int rem=num%10;
+			rev=rev*10+rem;
+			num=num/10;
+		}
+		int rems=rev%10;
+		if (rems % 2!=0)
+		{
+			System.out.println(" It Is Odd");
+		}
+		else
+			System.out.println(" It Is Even");
+	}
+}

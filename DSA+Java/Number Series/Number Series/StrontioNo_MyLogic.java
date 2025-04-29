@@ -1,0 +1,42 @@
+class StrontioNo_MyLogic 
+{
+	public static void main(String[] args) 
+	{
+		int num=1386;
+		int count=0;
+		int res=num;
+		while (num>0)
+		{
+			count++;
+			num/=10;
+		}
+		num=res;
+		int square1=num*2;
+		int square2=num*2;
+		int rem1=0;
+		int rem2=0;
+		if (count==4)
+		{
+			rem1=square1%100;
+			rem1/=10;
+			rem2=square2%1000;
+			rem2/=100;
+
+		
+			if (rem1==rem2)
+			{
+				System.out.println("It Is Strontio No.");
+			}
+			else 
+		{
+				System.out.println("It Is Not Strintio No.");
+		}
+		}
+
+		else 
+		{
+			System.out.println("It is Not Strontio No.");
+		}
+
+	}
+}

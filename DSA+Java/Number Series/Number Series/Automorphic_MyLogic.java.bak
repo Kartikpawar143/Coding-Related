@@ -1,0 +1,39 @@
+class Automorphic_MyLogic 
+{
+	public static void main(String[] args) 
+	{
+		int num=345;
+		int count=0;
+		int square=num*num;
+		int res=num;
+		int rev=0;
+		int rem1=0;
+
+		while (num>0)
+		{
+			count++;
+			num/=10;
+		}
+		num=res;
+		for (int i=1;i<=count;i++)
+		{
+			int rem=square%10;
+			rem1=rem1*10+rem;
+			square/=10;
+		}
+		while (rem1>0)
+		{
+			int rem=rem1%10;
+			rev=rev*10+rem;
+			rem1/=10;
+		}
+		num=res;
+		if (rev==num)
+		{
+			System.out.println(res+ " Is A Automorphic No.");
+		}
+		else
+			System.out.println(res+ " Is Not Automorphic No.");
+
+	}
+}

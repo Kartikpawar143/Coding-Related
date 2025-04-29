@@ -1,0 +1,30 @@
+class StrongNo 
+{
+	public static void main(String[] args) 
+	{
+		int num=145;
+		int fact=1;
+		int sum=0;
+		int num1=num;
+
+		while (num>0)
+		{
+			fact=1;
+			int rem=num%10;
+			for (int i=rem;i>=1;i--)
+			{
+				fact=fact*i;
+			}
+			sum=sum+fact;
+			num=num/10;
+		}
+		if (sum==num1)
+		{
+			System.out.println(num1+ " Is Strong No.");
+		}
+		else 
+		    System.out.println(num1+ " Is Not a Strong No.");
+	}
+		 
+	}
+
