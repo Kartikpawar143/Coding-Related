@@ -82,11 +82,7 @@ public class BankingProject {
                             System.out.println("ACCOUNT LOCKED DUE TO MULTIPLE FAILED ATTEMPTS");
                             break;
                         }
-                    }
-                    System.out.println("Thank u & Never Visit Again");
-                    System.out.println("Your Account is Deactivated for 48 Hrs.");
-                    System.exit(0);
-                }
+                        
                     }
                 }
                 
