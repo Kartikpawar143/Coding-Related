@@ -169,7 +169,9 @@ public class Funtions_Methods {
     //         fun(3,2,4);
 
     //         fun("Kartik", "Pawar");
-    //     }
+
+               
+       // }
 
     //     static int sum( int a , int b){
     //         return a+b;
@@ -186,8 +188,9 @@ public class Funtions_Methods {
     //     static void fun(String...x){
     //         System.out.println(Arrays.toString(x));
     //     }
+           
 
-
+        //}
     
     
 

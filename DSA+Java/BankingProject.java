@@ -8,6 +8,8 @@ public class BankingProject {
         double bal = 0.0;
 
         Scanner sc = new Scanner(System.in);
+        for (;;) {
+            
         {
             System.out.println();
             System.out.println("=========================================");
@@ -55,33 +57,39 @@ public class BankingProject {
 
                 case 2:
                 
-                System.out.println();
-                System.out.println(" ----------- EXISTING USER ------------ ");
-                System.out.println();
-                System.out.println("**LOGIN TO YOUR ACCOUNT**");
-                System.out.println();
-                System.out.print(">> Enter Username / Phone no. : ");
-                String loginCrid = sc.next();
-                System.out.print(">> Enter Pin:");
-                int loginpin = sc.nextInt();
-                // if ( loginCrid.equals(name) || loginCrid.equals(contact) && loginpin == (pin) ) {
-                //     System.out.println();
-                //     System.out.println("LOGIN SUCCESSFULLY");
-                //     System.out.println("WELCOME " + name);
-                //     System.out.println("YOUR BALANCE IS: " + bal);
-                //     System.out.println();
-                //     System.out.println("**CHOOSE YOUR OPTION**");
-                //     System.out.println("1. Withdraw Amount ");
-                //     System.out.println("2. Deposit Amount ");
-                //     System.out.println("3. Transfer Amount ");
-                //     System.out.println("4. Mini Statement ");
-                // }
-                // else{
-                //     for (int i = 1; i <=3 ; i++){
-                //         System.out.println("LOGIN FAILED");
-                //         System.out.println("Attempts left:" + i);
-                //     }
-                // }
+                for (int i = 3; i >=1; i--) {
+                    System.out.println();
+                    System.out.println(" ----------- EXISTING USER ------------ ");
+                    System.out.println();
+                    System.out.println("**LOGIN TO YOUR ACCOUNT**");
+                    System.out.println();
+                    System.out.print(">> Enter Username / Phone no. : ");
+                    String loginCrid = sc.next();
+                    System.out.print(">> Enter Pin:");
+                    int loginpin = sc.nextInt();
+                    if (loginCrid.equals(name) || loginCrid.equals(contact) && loginpin == pin) {
+                        System.out.println("LOGIN SUCCESSFUL");
+                        System.out.println();
+                        System.out.println("WELCOME " + name);
+                        System.out.println();
+                        System.out.println("YOUR BALANCE IS: " + bal + "rs");    
+                    }
+                    else {
+                        System.out.println("INVALID CREDENTIALS");
+                        System.out.println(" REMAINING ATTEMPTS : " + (i-1));
+                        if (i == 1) {
+                            System.out.println();
+                            System.out.println("ACCOUNT LOCKED DUE TO MULTIPLE FAILED ATTEMPTS");
+                            break;
+                        }
+                    }
+                    System.out.println("Thank u & Never Visit Again");
+                    System.out.println("Your Account is Deactivated for 48 Hrs.");
+                    System.exit(0);
+                }
+                    }
+                }
+                
                 
                 }
 
@@ -94,3 +102,4 @@ public class BankingProject {
 
 
     }
+}
