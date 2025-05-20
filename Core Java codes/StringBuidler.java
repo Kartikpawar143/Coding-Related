@@ -1,4 +1,4 @@
-package spawar;
+
 import java.util.*;
 public class StringBuidler {
 	public static void main (String args[]) {
