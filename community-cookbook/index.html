@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Cookbook - Preserving Culinary Traditions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Community Cookbook</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuisines.html">Cuisines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit-recipe.html">Submit Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search recipes...">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center user-section">
+                    <!-- This section will be dynamically updated based on login status -->
+                    <a href="login.html" class="btn btn-primary logged-out-content">Login</a>
+                    
+                    <div class="dropdown logged-in-content d-none">
+                        <button class="btn btn-link dropdown-toggle user-menu-button" type="button" id="userMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/users/default-avatar.png" alt="User" class="user-avatar">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuDropdown">
+                            <li><span class="dropdown-item-text fw-bold user-name">User Name</span></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                            <li><a class="dropdown-item" href="my-recipes.html">My Recipes</a></li>
+                            <li><a class="dropdown-item" href="saved-recipes.html">Saved Recipes</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-button">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Preserving Culinary Traditions Together</h1>
+            <p class="lead mb-5">Discover recipes from around the world, share your family favorites</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="categories.html" class="btn btn-primary btn-lg">Browse Categories</a>
+                <a href="submit-recipe.html" class="btn btn-outline-light btn-lg">Share Your Recipe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Recipes Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Featured Recipes</h2>
+                <a href="search.html?featured=true" class="view-all-link">View All</a>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="featured-recipes">
+                <!-- Featured recipes will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Popular Categories</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4" id="popular-categories">
+                <!-- Categories will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Recipes Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">Latest Recipes</h2>
+                <a href="search.html?sort=newest" class="view-all-link">View All</a>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="latest-recipes">
+                <!-- Latest recipes will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Community Section -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="mb-3">Join Our Cooking Community</h2>
+            <p class="lead mb-4">Share recipes, connect with other food lovers, and preserve culinary traditions together.</p>
+            <a href="register.html" class="btn btn-light btn-lg logged-out-content">Sign Up Now</a>
+            <a href="submit-recipe.html" class="btn btn-light btn-lg logged-in-content d-none">Share Your Recipe</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Community Cookbook</h5>
+                    <p>Preserving culinary traditions one recipe at a time</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="cuisines.html" class="text-white-50">Cuisines</a></li>
+                        <li><a href="categories.html" class="text-white-50">Categories</a></li>
+                        <li><a href="submit-recipe.html" class="text-white-50">Submit Recipe</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50"><i class="fab fa-instagram me-2"></i> Instagram</a></li>
+                        <li><a href="#" class="text-white-50"><i class="fab fa-facebook me-2"></i> Facebook</a></li>
+                        <li><a href="#" class="text-white-50"><i class="fab fa-pinterest me-2"></i> Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact</h5>
+                    <p class="mb-1">Email: hello@communitycookbook.com</p>
+                    <p>Have questions or feedback? <a href="contact.html" class="text-white">Contact us</a></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <p>&copy; 2025 Community Cookbook Collection. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in (using localStorage for demo purposes)
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+            
+            // Update UI based on login status
+            updateUIForLoginStatus(isLoggedIn, userData);
+            
+            // Add logout functionality
+            const logoutButton = document.getElementById('logout-button');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Clear login data
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userData');
+                    
+                    // Update UI
+                    updateUIForLoginStatus(false, {});
+                    
+                    // Optional: Redirect to home page
+                    // window.location.href = 'index.html';
+                });
+            }
+        });
+        
+        function updateUIForLoginStatus(isLoggedIn, userData) {
+            const loggedInElements = document.querySelectorAll('.logged-in-content');
+            const loggedOutElements = document.querySelectorAll('.logged-out-content');
+            
+            if (isLoggedIn) {
+                // Show logged-in elements
+                loggedInElements.forEach(el => el.classList.remove('d-none'));
+                
+                // Hide logged-out elements
+                loggedOutElements.forEach(el => el.classList.add('d-none'));
+                
+                // Update user info
+                const userNameElements = document.querySelectorAll('.user-name');
+                userNameElements.forEach(el => {
+                    el.textContent = userData.name || 'User';
+                });
+                
+                // Update user avatar if available
+                const userAvatarElements = document.querySelectorAll('.user-avatar');
+                userAvatarElements.forEach(el => {
+                    if (userData.avatar) {
+                        el.src = userData.avatar;
+                    }
+                });
+            } else {
+                // Show logged-out elements
+                loggedOutElements.forEach(el => el.classList.remove('d-none'));
+                
+                // Hide logged-in elements
+                loggedInElements.forEach(el => el.classList.add('d-none'));
+            }
+        }
+    </script>
+</body>
+</html>

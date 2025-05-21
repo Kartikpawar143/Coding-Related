@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandma's Apple Pie - Community Cookbook</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Community Cookbook</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuisines.html">Cuisines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit-recipe.html">Submit Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search recipes...">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="recipe-page">
+            <!-- Breadcrumbs -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="categories.html?category=desserts">Desserts</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Grandma's Apple Pie</li>
+                </ol>
+            </nav>
+
+            <!-- Recipe Header -->
+            <div class="recipe-header">
+                <h1 class="recipe-title-large" id="recipe-title">Grandma's Apple Pie</h1>
+                
+                <div class="d-flex flex-wrap gap-4 mb-3">
+                    <div class="recipe-author">
+                        <img src="images/users/sarah.jpg" alt="Sarah Johnson" class="author-photo">
+                        <span>By <a href="profile.html?user=user123">Sarah Johnson</a></span>
+                    </div>
+                    
+                    <div class="recipe-stats">
+                        <span class="prep-time">
+                            <i class="far fa-clock"></i> Prep: <span id="prep-time">45</span> min
+                        </span>
+                        <span class="cook-time">
+                            <i class="fas fa-fire"></i> Cook: <span id="cook-time">50</span> min
+                        </span>
+                        <span class="servings">
+                            <i class="fas fa-utensils"></i> Serves: <span id="servings">8</span>
+                        </span>
+                    </div>
+                    
+                    <div class="recipe-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="ms-1">4.8 (156 ratings)</span>
+                    </div>
+                </div>
+                
+                <div class="recipe-tags mb-4">
+                    <a href="categories.html?category=desserts" class="category-tag me-2">Desserts</a>
+                    <span class="badge bg-secondary me-2">American</span>
+                    <span class="badge bg-secondary me-2">Baking</span>
+                    <span class="badge bg-secondary me-2">Apple</span>
+                    <span class="badge bg-secondary">Pie</span>
+                </div>
+            </div>
+            
+            <!-- Recipe Main Content -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="recipe-image-main">
+                        <img src="images/recipe-photos/apple-pie.jpg" alt="Grandma's Apple Pie" class="img-fluid">
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                                        <div class="recipe-description mb-4">
+                        <h2>About this recipe</h2>
+                        <p>A classic American dessert with a flaky crust and cinnamon-spiced apple filling.</p>
+                        
+                        <div class="recipe-story mt-4 p-4 bg-light rounded">
+                            <h3>The story behind this recipe</h3>
+                            <p>This recipe has been in our family for four generations. My grandmother learned it from her mother, who brought it from Germany when she immigrated in the early 1900s. Every fall, we would pick apples together and spend the afternoon making pies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recipe Tabs -->
+            <div class="recipe-tabs mb-5">
+                <ul class="nav nav-tabs mb-4" id="recipeTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients" type="button" role="tab" aria-controls="ingredients" aria-selected="true">Ingredients</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions" type="button" role="tab" aria-controls="instructions" aria-selected="false">Instructions</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab" aria-controls="notes" aria-selected="false">Notes & Tips</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="recipeTabsContent">
+                    <!-- Ingredients Tab -->
+                    <div class="tab-pane fade show active" id="ingredients" role="tabpanel" aria-labelledby="ingredients-tab">
+                        <h3>Ingredients</h3>
+                        <ul class="ingredients-list">
+                            <li>
+                                <span class="ingredient-amount">2 1/2 cups</span>
+                                <span class="ingredient-name">all-purpose flour</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 tsp</span>
+                                <span class="ingredient-name">salt</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 tbsp</span>
+                                <span class="ingredient-name">granulated sugar</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 cup</span>
+                                <span class="ingredient-name">unsalted butter, cold and cubed</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1/4 to 1/2 cup</span>
+                                <span class="ingredient-name">ice water</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">8 cups</span>
+                                <span class="ingredient-name">thinly sliced apples (Granny Smith or Honeycrisp)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">3/4 cup</span>
+                                <span class="ingredient-name">granulated sugar</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">2 tbsp</span>
+                                <span class="ingredient-name">all-purpose flour</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 tsp</span>
+                                <span class="ingredient-name">ground cinnamon</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1/4 tsp</span>
+                                <span class="ingredient-name">ground nutmeg</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1/4 tsp</span>
+                                <span class="ingredient-name">salt</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 tbsp</span>
+                                <span class="ingredient-name">lemon juice</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">2 tbsp</span>
+                                <span class="ingredient-name">unsalted butter, cut into small pieces</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1</span>
+                                <span class="ingredient-name">egg, beaten with 1 tbsp water (for egg wash)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 tbsp</span>
+                                <span class="ingredient-name">coarse sugar for sprinkling (optional)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Instructions Tab -->
+                    <div class="tab-pane fade" id="instructions" role="tabpanel" aria-labelledby="instructions-tab">
+                        <h3>Instructions</h3>
+                        <ol class="instructions-list">
+                            <li class="instruction-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>In a large bowl, combine flour, salt, and sugar for the crust. Add cold cubed butter and cut into the flour using a pastry cutter until mixture resembles coarse crumbs.</p>
+                                </div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Gradually add ice water, 1 tablespoon at a time, stirring with a fork until dough holds together when pressed. Divide dough in half, shape into disks, wrap in plastic, and refrigerate for at least 1 hour.</p>
+                                </div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>Preheat oven to 425°F (220°C). In a large bowl, combine sliced apples, sugar, flour, cinnamon, nutmeg, salt, and lemon juice. Toss until apples are evenly coated.</p>
+                                    <img src="images/recipe-photos/apple-pie-step3.jpg" alt="Step 3" class="step-image">
+                                </div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <p>Roll out one disk of dough on a floured surface to a 12-inch circle. Transfer to a 9-inch pie dish. Fill with apple mixture and dot with butter pieces.</p>
+                                </div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <p>Roll out the second disk of dough and place over the filling. Trim excess dough, seal and crimp edges. Cut several slits in the top crust for steam to escape. Brush with egg wash and sprinkle with coarse sugar if desired.</p>
+                                    <img src="images/recipe-photos/apple-pie-step5.jpg" alt="Step 5" class="step-image">
+                                </div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <p>Bake for 45-50 minutes, until crust is golden brown and filling is bubbling. Cover edges with foil if browning too quickly. Cool on a wire rack for at least 2 hours before serving.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Notes Tab -->
+                    <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+                        <h3>Notes & Tips</h3>
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item">For the flakiest crust, make sure all ingredients are cold and don't overwork the dough.</li>
+                            <li class="list-group-item">A mix of tart and sweet apples gives the best flavor balance.</li>
+                            <li class="list-group-item">Let the pie cool completely before slicing to allow the filling to set.</li>
+                        </ul>
+                        
+                        <div class="substitutions mt-4">
+                            <h4>Possible Substitutions</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <strong>Apples:</strong> You can use any baking apple variety like Braeburn, Jonagold, or Pink Lady.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Butter:</strong> Vegetable shortening can be used for a dairy-free crust.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Sugar:</strong> Brown sugar can replace some or all of the granulated sugar for a deeper flavor.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recipe Actions -->
+            <div class="d-flex flex-wrap gap-3 mb-5">
+                <button class="action-button bg-light" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Recipe
+                </button>
+                <button class="action-button bg-warning text-white">
+                    <i class="far fa-bookmark"></i> Save Recipe
+                </button>
+                <button class="action-button bg-info text-white">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+            </div>
+            
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h3 class="mb-4">Comments (3)</h3>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="images/users/default-avatar.png" alt="User" class="comment-user-avatar">
+                            <div class="flex-grow-1">
+                                <div class="mb-2">
+                                    <textarea class="form-control" rows="3" placeholder="Share your thoughts or tips about this recipe..."></textarea>
+                                </div>
+                                <button class="btn btn-primary">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comments-list">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="comment-header">
+                                <div class="comment-user">
+                                    <img src="images/users/user1.jpg" alt="John Doe" class="comment-user-avatar">
+                                    <div>
+                                        <a href="profile.html?user=user456" class="comment-user-name">John Doe</a>
+                                        <div class="comment-date">October 15, 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p>I made this pie for Thanksgiving and it was a huge hit! The crust was perfectly flaky and the filling had just the right amount of sweetness. Will definitely make again!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="comment-header">
+                                <div class="comment-user">
+                                    <img src="images/users/user2.jpg" alt="Emily Wilson" class="comment-user-avatar">
+                                    <div>
+                                        <a href="profile.html?user=user789" class="comment-user-name">Emily Wilson</a>
+                                        <div class="comment-date">September 28, 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p>I added a teaspoon of vanilla extract to the filling and it was delicious! Also, I found that using a mix of Granny Smith and Honeycrisp apples gave a perfect balance of tart and sweet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="comment-header">
+                                <div class="comment-user">
+                                    <img src="images/users/user3.jpg" alt="Robert Chen" class="comment-user-avatar">
+                                    <div>
+                                        <a href="profile.html?user=user101" class="comment-user-name">Robert Chen</a>
+                                        <div class="comment-date">August 12, 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p>This was my first time making a pie from scratch and your instructions were so clear and helpful. The pie turned out beautifully! I'm no longer intimidated by homemade pie crust.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Recipes -->
+            <div class="related-recipes mt-5">
+                <h3 class="mb-4">You might also like</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="recipe-card">
+                            <div class="recipe-image-container">
+                                <img src="images/recipe-photos/blueberry-pie.jpg" alt="Blueberry Pie" class="recipe-image">
+                            </div>
+                            <div class="recipe-content">
+                                <h5 class="recipe-title">Blueberry Pie</h5>
+                                <a href="recipe.html?id=2" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="recipe-card">
+                            <div class="recipe-image-container">
+                                <img src="images/recipe-photos/cherry-pie.jpg" alt="Cherry Pie" class="recipe-image">
+                            </div>
+                            <div class="recipe-content">
+                                <h5 class="recipe-title">Cherry Pie</h5>
+                                <a href="recipe.html?id=3" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="recipe-card">
+                            <div class="recipe-image-container">
+                                <img src="images/recipe-photos/peach-cobbler.jpg" alt="Peach Cobbler" class="recipe-image">
+                            </div>
+                                                        <div class="recipe-content">
+                                <h5 class="recipe-title">Peach Cobbler</h5>
+                                <a href="recipe.html?id=4" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="recipe-card">
+                            <div class="recipe-image-container">
+                                <img src="images/recipe-photos/apple-crumble.jpg" alt="Apple Crumble" class="recipe-image">
+                            </div>
+                            <div class="recipe-content">
+                                <h5 class="recipe-title">Apple Crumble</h5>
+                                <a href="recipe.html?id=5" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Community Cookbook</h5>
+                    <p>Preserving culinary traditions one recipe at a time</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="cuisines.html" class="text-white-50">Cuisines</a></li>
+                        <li><a href="categories.html" class="text-white-50">Categories</a></li>
+                        <li><a href="submit-recipe.html" class="text-white-50">Submit Recipe</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50"><i class="fab fa-instagram me-2"></i> Instagram</a></li>
+                        <li><a href="#" class="text-white-50"><i class="fab fa-facebook me-2"></i> Facebook</a></li>
+                        <li><a href="#" class="text-white-50"><i class="fab fa-pinterest me-2"></i> Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact</h5>
+                    <p class="mb-1">Email: hello@communitycookbook.com</p>
+                    <p>Have questions or feedback? <a href="contact.html" class="text-white">Contact us</a></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <p>&copy; 2025 Community Cookbook Collection. All rights reserved.</p>
+                <div>
+                    <a href="privacy.html" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/recipe.js"></script>
+</body>
+</html>    
