@@ -70,17 +70,87 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center text-white">
-            <h1 class="display-4 fw-bold mb-4">Preserving Culinary Traditions Together</h1>
-            <p class="lead mb-5">Discover recipes from around the world, share your family favorites</p>
-            <div class="d-flex justify-content-center gap-3">
+    <!-- Hero Section with Sliding Background Images -->
+    <section class="hero-section position-relative">
+        <div class="hero-bg-slider position-absolute w-100 h-100 top-0 start-0 overflow-hidden" style="z-index:0;">
+            <img src="images/hero-background.jpg" class="hero-bg-img active" alt="" />
+            <img src="images/about-hero.jpg" class="hero-bg-img" alt="" />
+            <img src="images/about-story.jpg" class="hero-bg-img" alt="" />
+        </div>
+        <div class="container text-center text-white position-relative" style="z-index:2;">
+            <h1 class="display-4 fw-bold mb-4 hero-slide">Preserving Culinary Traditions Together</h1>
+            <p class="lead mb-5 hero-slide delay-1">Discover recipes from around the world, share your family favorites</p>
+            <div class="d-flex justify-content-center gap-3 hero-slide delay-2">
                 <a href="categories.html" class="btn btn-primary btn-lg">Browse Categories</a>
                 <a href="submit-recipe.html" class="btn btn-outline-light btn-lg">Share Your Recipe</a>
             </div>
         </div>
     </section>
+    <script>
+    // Sliding background images for hero section
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.hero-bg-img');
+        let idx = 0;
+        setInterval(() => {
+            images[idx].classList.remove('active');
+            idx = (idx + 1) % images.length;
+            images[idx].classList.add('active');
+        }, 4000);
+    });
+    </script>
+    <style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+    .hero-bg-slider {
+        pointer-events: none;
+    }
+    .hero-bg-img {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.2s cubic-bezier(0.23,1,0.32,1);
+        z-index: 0;
+    }
+    .hero-bg-img.active {
+        opacity: 1;
+        z-index: 1;
+    }
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+    }
+    /* Sliding animation for hero content */
+    .hero-slide {
+        opacity: 0;
+        transform: translateY(60px);
+        animation: hero-slide-in 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+    .hero-slide.delay-1 { animation-delay: 0.2s; }
+    .hero-slide.delay-2 { animation-delay: 0.5s; }
+    @keyframes hero-slide-in {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @media (max-width: 768px) {
+        .hero-section { min-height: 70vh; padding: 0; }
+    }
+    </style>
 
     <!-- Featured Recipes Section -->
     <section class="py-5">
