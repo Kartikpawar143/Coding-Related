@@ -25,7 +25,6 @@ public class TDXArray{
 				if (numbers[i][j] == x) {
 					System.out.println("x found on index " + "(" + i + "," + j + ")");
 				}
-				
 			}
 		}
 	}
